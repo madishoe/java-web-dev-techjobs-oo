@@ -36,6 +36,38 @@ public class Job {
     //  match.
 
     @Override
+    public String toString() {
+        String jobString = "\n" + "ID: " + this.id;
+
+        if (this.name == null) {
+            jobString += "\n" + "Name: " + "Data not available";
+        } else {
+            jobString += "\n" + "Name: " + this.name;
+        }
+        if (this.employer == null) {
+            jobString += "\n" + "Employer: " + "Data not available";
+        } else {
+            jobString += "\n" + "Employer: " + this.employer;
+        }
+        if (this.location == null) {
+            jobString += "\n" + "Location: " + "Data not available";
+        }  else {
+            jobString += "\n" + "Location: " + this.location;
+        }
+        if (this.positionType == null) {
+            jobString += "\n" + "Position Type: " + "Data not available";
+        } else {
+            jobString += "\n" + "Position Type: " + this.positionType;
+        }
+        if (this.coreCompetency == null) {
+            jobString += "\n" + "Core Competency: " + "Data not available" + "\n";
+        } else {
+            jobString += "\n" + "Core Competency: " + this.coreCompetency + "\n";
+        }
+        return jobString;
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Job)) return false;
